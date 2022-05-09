@@ -1,23 +1,32 @@
-import React from 'react'
-import './App.scss';
-import Home from './pages/home';
-import Header from './components/header/header';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Portofolio from './pages/portofolio';
-import About from './pages/about';
+import React from "react";
+import { Card } from "react-bootstrap";
+import "./App.scss";
+import Shows from "./pages/shows";
+import Header from "./components/header/header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Portofolio from "./pages/finished";
+import About from "./pages/watchlist";
+import Carusel from "./components/caruselComponent/caruselComponent";
+import Watchlist from "./pages/watchlist";
+import Finished from "./pages/finished";
 
 function App() {
-
   return (
     <div className="App">
       <Router>
-      <Header />
+        <Header />
+
+        <Carusel />
         <Routes>
-          <Route index path='/' element={<Home/>}/>
-          <Route path='portofolio' element={<Portofolio/>}/>
-          <Route path='about' element={<About/>}/>
+          <Route index path="/" element={<Shows />} />
+          <Route path="portofolio" element={<Finished />} />
+          <Route path="about" element={<Watchlist />} />
         </Routes>
+        
+      
+     
       </Router>
+      
     </div>
   );
 }

@@ -7,13 +7,13 @@ const Header = () => {
     return (
         <Navbar bg="dark" expand="lg" variant='dark'>
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="#shows">Bored Bingewatcher</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Link to="/" className="custom-nav-link">Home</Link>
-                        <Link to="/portofolio" className="custom-nav-link">Portofolio</Link>
-                        <Link to="/about" className="custom-nav-link">About</Link>
+                        <Link to="/" className="custom-nav-link">Search and browse</Link>
+                        <Link to="/watchlist" className="custom-nav-link">Watchlist</Link>
+                        <Link to="/finished" className="custom-nav-link">Finished</Link>
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

@@ -6,14 +6,14 @@ const Carusel = () => {
     return (
         <Carousel>
             <Carousel.Item>
-                <div style={{width: '100%', height: '480px', background: '#3399FF' }}></div>
+                <div style={{width: '100%', height: '150px', background: 'black'  }}></div>
                 <Carousel.Caption>
                     <h3>First slide label</h3>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-            <div style={{width: '100%', height: '480px', background: 'blue' }}></div>
+            <div style={{width: '100%', height: '150px', background: 'black' }}></div>
 
                 <Carousel.Caption>
                     <h3>Second slide label</h3>
@@ -21,7 +21,7 @@ const Carusel = () => {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-            <div style={{width: '100%', height: '480px', background: 'orange' }}></div>
+            <div style={{width: '100%', height: '150px', background: 'black' }}></div>
                 <Carousel.Caption>
                     <h3>Third slide label</h3>
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
