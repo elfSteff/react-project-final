@@ -4,30 +4,29 @@ import "./App.scss";
 import Shows from "./pages/shows/shows";
 import Header from "./components/header/header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Portofolio from "./pages/finished/finished";
-import About from "./pages/watchlist/watchlist";
-import Carusel from "./components/caruselComponent/caruselComponent";
 import Watchlist from "./pages/watchlist/watchlist";
-import Finished from "./pages/finished/finished";
+import FinishedList from "./pages/finished/finished";
+import { Store } from './context/store';
 
 function App() {
+  const initState = {
+    shows: [],
+    watched: [],
+    finished: []
+}
   return (
+    <Store.Provider value={initState}>
     <div className="App">
       <Router>
         <Header />
-
-        <Carusel />
         <Routes>
           <Route index path="/" element={<Shows />} />
-          <Route path="portofolio" element={<Finished />} />
-          <Route path="about" element={<Watchlist />} />
+          <Route path="/finished" element={<FinishedList />} />
+          <Route path="/watchlist" element={<Watchlist />} />
         </Routes>
-        
-      
-     
       </Router>
-      
     </div>
+    </Store.Provider>
   );
 }
 
