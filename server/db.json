@@ -1,0 +1,40 @@
+{
+  "products": {
+    "cosmetics": [
+      {
+        "lipstick": {
+          "price": "10ron",
+          "description": "blabla",
+          "thumbnail": "lipstick-red.jpg"
+        },
+        "eyeliner": {
+          "price": "20ron",
+          "description": "blabla",
+          "thumbnail": "eyeliner.jpg"
+        }
+      }
+    ],
+    "healthy-food": {
+      "id": 1
+    },
+    "accessories": {
+      "names": [
+        "blabla"
+      ]
+    }
+  },
+  "users": {
+    "id": 3
+  },
+  "questions":{
+    "1": {
+      "q": "nkanmsdkasknsad?",
+      "correctAnswer": ["a", "b"],
+      "answers": {
+        "a": "asdad",
+        "b": "asdasd",
+        "c": "fdghjk"
+      }
+    }
+  }
+}
