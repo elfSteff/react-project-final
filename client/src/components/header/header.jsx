@@ -1,26 +1,21 @@
 import React from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './header.css';
+import bingwatcherMain from '../../pages/bingewatcher/bingewatcherMain';
 
 const Header = () => {
     return (
-        <Navbar bg="light" expand="lg" variant='light'>
+        <Navbar  bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#shows">Bored Bingewatcher</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/bingewatcherMain" >Bored Bingewatcher</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Link to="/" className="custom-nav-link">Search for Shows</Link>
+                    <Link to="/bingewatcherMain" className="custom-nav-link">all Shows</Link>
+                    <Link to="/shows" className="custom-nav-link">Search for Shows</Link>
                         <Link to="/watchlist" className="custom-nav-link">Watchlist</Link>
                         <Link to="/finished" className="custom-nav-link">Finished</Link>
-                        {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

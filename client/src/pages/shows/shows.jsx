@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import { Button, Card } from "react-bootstrap";
 import CardHeader from "react-bootstrap/esm/CardHeader";
-import Carusel from "../../components/caruselComponent/caruselComponent";
 import { searchShows } from "../../services/api";
 import { Store } from "../../context/store";
 import "./shows.css";
@@ -57,9 +56,7 @@ const Shows = () => {
 
   return (
     <>
-      <div>
-        <Carusel />
-      </div>
+      <div></div>
       <div
         style={{ width: "22rem", margin: "2rem", display: "flex" }}
         className="m-3"
@@ -109,18 +106,17 @@ const Shows = () => {
                     ></div>
                     {/* <iframe srcDoc={ item.show.summary}></iframe> */}
                   </Card.Text>
-                  <div>{item.show.genres}</div>
-                  <Button
-                    variant="primary"
+                  <div>{item.show.genres + ' '}</div>
+                  <Button 
+                    variant="dark" 
                     onClick={() => handleMoveToWhatch(item)}
                   >
-                    Move to whatch list
+                    Move to whatchlist
                   </Button>
                 </Card.Body>
               </Card>
             ))}
         </div>
-        <div>Layout detalii</div>
       </div>
     </>
   );

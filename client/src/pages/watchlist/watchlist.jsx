@@ -31,10 +31,10 @@ const Watchlist = () => {
                 </Card.Text>
                 <div>{item.show.genres}</div>
                 <Button
-                  variant="primary"
+                  variant="dark"
                   onClick={() => handleMoveToFinished(item)}
                 >
-                  Move to finished list
+                 Move to Finished
                 </Button>
               </Card.Body>
             </Card>

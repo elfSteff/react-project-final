@@ -1,0 +1,30 @@
+.home-page-container {
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: contents;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#details-card-button{
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529
+}
+
+#cardShow {
+
+    background-color: rgb(245, 242, 232);
+    opacity: calc(80%);
+}
+
+#button-container-cards{
+flex-wrap: wrap;
+display: flex;
+justify-content: center;
+ margin: 1rem;
+gap: 3rem;
+}

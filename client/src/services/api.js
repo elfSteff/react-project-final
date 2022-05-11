@@ -16,19 +16,22 @@ const searchShows = async (querySearch) => {
 
 export { searchShows };
 
-const imgSearch = axios.create({
+
+
+
+const stable = axios.create({
   baseURL: "https://api.tvmaze.com",
   headers: { Accept: "application/json" },
 });
 
-const searchSingleShows = async (querySingleSearch) => {
+const showsHome = async (querySearch) => {
   try {
-    const img = await imgSearch.get(
-      ` /singlesearch/shows?q=:query${querySingleSearch}`
-    );
-    return img;
+    const home = await stable.get(`/search/shows?q=${querySearch}`);
+    return home;
   } catch (error) {
     console.log(error);
   }
 };
-export { searchSingleShows };
+
+export { showsHome };
+

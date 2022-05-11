@@ -24,7 +24,7 @@ const FinishedList = () => {
                   <div
                     dangerouslySetInnerHTML={{ __html: item?.show?.summary }}
                   ></div>
-                  {/* <iframe srcDoc={ item.show.summary}></iframe> */}
+                
                 </Card.Text>
                 <div>{item.show.genres}</div>
                 {/* <Button
