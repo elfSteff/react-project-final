@@ -6,9 +6,13 @@ import Header from "../../components/header/header";
 import CustomCard from "../../components/customCard/customCard";
 import { showCardHeader } from "../../utils/uiConstants";
 
+
 const BingewatcherMain = () => {
+
   const [showData, setShowData] = useState([]);
   const [page, setPage] = useState(1);
+
+  const store = useContext(Store);
  
 
   useEffect(() => {
@@ -38,14 +42,14 @@ const BingewatcherMain = () => {
 
   return (
     <div className="home-page-container">
-       {showData.map(show => <CustomCard key={show.id} cardData={show}/>)}
+       {showData?.map(show => <CustomCard key={show.id} cardData={show} showDetails={false}/>)}
       <div className="home-table-pagination-container">
         <button onClick={decrementPage}>Previous</button>
         <div>{page}</div>
         <button onClick={incrementPage}>Next</button>
       </div>
     </div>
-  );
+  )
 };
 // style={{  }}
 export { BingewatcherMain };

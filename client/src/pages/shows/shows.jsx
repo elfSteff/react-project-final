@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import { Button, Card } from "react-bootstrap";
-import CardHeader from "react-bootstrap/esm/CardHeader";
+
 import { searchShows } from "../../services/api";
 import { Store } from "../../context/store";
 import "./shows.css";
@@ -15,7 +15,7 @@ const Shows = () => {
   const store = useContext(Store);
 
   useEffect(() => {
-    setSearchRes(store.shows);
+    setSearchRes(store.globalState.shows);
   }, []);
 
   const handleQueryOnChange = (e) => {
@@ -43,8 +43,13 @@ const Shows = () => {
     setSearchRes(filteredRes);
   };
 
-  const handleMoveToWhatch = (itemToMove) => {
-    store.watched.push(itemToMove);
+  const handleMoveToWatch = (itemToMove) => {
+    const temp = store.globalState.watched
+     temp.push(itemToMove);
+     store.dispatch({
+       type: "SET_WATCHED",
+       payload: temp
+     })
   };
 
   const clearGenreFilter = () => {
@@ -109,7 +114,7 @@ const Shows = () => {
                   <div>{item.show.genres + ' '}</div>
                   <Button 
                     variant="dark" 
-                    onClick={() => handleMoveToWhatch(item)}
+                    onClick={() => handleMoveToWatch(item)}
                   >
                     Move to whatchlist
                   </Button>

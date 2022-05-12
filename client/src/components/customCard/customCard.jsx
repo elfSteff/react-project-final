@@ -3,10 +3,12 @@ import { showCardHeader } from "../../utils/uiConstants";
 import { Button, Card } from "react-bootstrap";
 import CardHeader from "react-bootstrap/esm/CardHeader";
 import Container from 'react-bootstrap/Container'
+import { Store } from "../../context/store";
 
 const CustomCard = ({ cardData }) => {
   return (
     <div className="home-cards-container">
+  
       <Container className="home-card-container-all-shows">
           <Card id="cardShow" style={{ width: "22rem", marginBottom: "1rem" }}>
             <Card.Img variant="top" src={cardData.image.medium} />
@@ -16,11 +18,12 @@ const CustomCard = ({ cardData }) => {
               <Card.Text>Average Runtime: {cardData.averageRuntime}min</Card.Text>
               <Container id= 'button-container-cards'>
               <Button id='details-card-button' > Details</Button>
-              <Button variant="dark"> Move to Finished</Button>
+              {/* <Button variant="dark"> Move to Watchlist</Button> */}
               </Container>
             </Card.Body>
           </Card>
           </Container>
+     
     </div>
   );
 };
