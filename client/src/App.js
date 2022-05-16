@@ -8,7 +8,7 @@ import Watchlist from "./pages/watchlist/watchlist";
 import FinishedList from "./pages/finished/finished";
 import { Store, StoreProvider } from './context/store';
 import Carusel from "./components/caruselComponent/caruselComponent";
-import Details from "./pages/details/details";
+import Details from "./pages/details/details"
 // import { BrowserRouter } from 'react-router-dom'
 import { BingewatcherMain } from '../src/pages/bingewatcher/bingewatcherMain';
 
@@ -21,9 +21,11 @@ function App() {
         <Header /> 
            
         <Routes>
+        
         <Route index path="/" element={<BingewatcherMain />} />
          <Route index path="/bingewatcherMain" element={<BingewatcherMain />} />
-         <Route path="/details" element = {<Details />} />
+        
+         <Route path="/details/:rendDetails" element = {<Details />} />
          <Route path="/shows" element={<Shows />} />
          <Route path="/finished" element={<FinishedList />} />
          <Route path="/watchlist" element={<Watchlist />} />

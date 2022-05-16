@@ -1,27 +1,29 @@
+export const showCardHeader = [
+  {
+    key: "id",
+  },
+  {
+    label: "image",
+    key: "image",
+  },
 
+  {
+    label: "name",
+    key: "name",
+  },
 
-export  const showCardHeader = [
-{
-    label: 'image',
-    key: 'image'
-},
+  {
+    label: "rating",
+    key: "rating",
+  },
 
-{
-    label: 'name',
-    key: 'name'
-},
+  {
+    label: "averageRuntime",
+    key: "averageRuntime",
+  },
 
-{
-    label: 'rating',
-    key: 'rating'
-},
-
-{
-    label: 'averageRuntime',
-    key: 'averageRuntime'
-},
-
-{
-    label: 'status',
-    key: 'status'
-}];
+  {
+    label: "status",
+    key: "status",
+  },
+];
