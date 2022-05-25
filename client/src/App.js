@@ -24,7 +24,7 @@ function App() {
         
         <Route index path="/" element={<BingewatcherMain />} />
          <Route index path="/bingewatcherMain" element={<BingewatcherMain />} />
-        
+               
          <Route path="/details/:rendDetails" element = {<Details />} />
          <Route path="/shows" element={<Shows />} />
          <Route path="/finished" element={<FinishedList />} />

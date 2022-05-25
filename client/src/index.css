@@ -26,8 +26,8 @@ nav{
 #root{
   min-height: 100vh;
   background-color: rgb(183, 165, 133);
-  min-width: 100vw;
-  padding: 2rem;
+  min-width: 15vw;
+  padding: 4rem;
 }
 
 .navbar-brand{
@@ -45,7 +45,7 @@ nav{
 
    
   input{
-    border-radius: 5px;
+    border-radius: 10px;
     max-height: 2rem
   }
 
@@ -53,10 +53,10 @@ nav{
     
     color: #fff;
     background-color: #212529;
-    border-color: #212529
-  
-
+    border-color: #212529;
+    border-radius: 10px;
   }
+
   #btngenre{
     color: #fff;
     background-color: #212529;
@@ -65,4 +65,21 @@ nav{
 
 .main{
   flex:1;
+}
+
+.move-to-watchlist-button{
+  color: #fff;
+  background-color: #7f8d4c;
+  border-color: #212529;
+  border-radius: 10px;
+  opacity: calc(70%);
+
+}
+
+.move-to-finished-button{
+  color: #fff;
+  background-color: #5aaa6e;
+  border-color: #212529;
+  border-radius: 10px;
+  opacity: calc(70%);
 }

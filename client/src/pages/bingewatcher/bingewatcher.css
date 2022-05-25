@@ -9,22 +9,34 @@
   justify-content: center;
 }
 
-#details-card-button{
-    color: #fff;
-    background-color: #212529;
-    border-color: #212529
+#details-card-button {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+  border-radius: 10px;
+  opacity: calc(80%);
 }
 
 #cardShow {
-
-    background-color: rgb(245, 242, 232);
-    opacity: calc(80%);
+  background-color: rgb(245, 241, 206);
+  opacity: calc(80%);
 }
 
-#button-container-cards{
-flex-wrap: wrap;
-display: flex;
-justify-content: center;
- margin: 1rem;
-gap: 3rem;
+#button-container-cards {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  gap: 3rem;
 }
+
+.home-table-pagination-container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  gap: 1rem;
+  opacity: calc(80%);
+  padding: 1rem;
+}
+

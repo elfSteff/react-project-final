@@ -6,7 +6,8 @@ const initState = {
     bingewatcherMain: [],
     shows: [],
     watched: [],
-    finished: []
+    finished: [],
+    details: []
 }
 
 const StoreProvider = ({ children }) => {

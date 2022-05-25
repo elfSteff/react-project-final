@@ -113,7 +113,7 @@ const Shows = () => {
                   </Card.Text>
                   <div>{item.show.genres + ' '}</div>
                   <Button 
-                    variant="dark" 
+                className="move-to-watchlist-button" 
                     onClick={() => handleMoveToWatch(item)}
                   >
                     Move to whatchlist
