@@ -73,6 +73,7 @@ nav{
   border-color: #212529;
   border-radius: 10px;
   opacity: calc(70%);
+ 
 
 }
 
@@ -82,4 +83,9 @@ nav{
   border-color: #212529;
   border-radius: 10px;
   opacity: calc(70%);
+
+}
+
+.details-card-container{
+  
 }

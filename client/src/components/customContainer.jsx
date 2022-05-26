@@ -17,6 +17,7 @@ const CustomContainer = ({ cardData, className }) => {
           <Card.Img variant="top" src={cardData?.image?.medium} />
           <Card.Body>
             <Card.Title className="card-title">{cardData.name} </Card.Title>
+            <Card.Link href={cardData.officialSite}>Official site</Card.Link>
             <CardHeader>
               Genres: {cardData.genres}
               <br />

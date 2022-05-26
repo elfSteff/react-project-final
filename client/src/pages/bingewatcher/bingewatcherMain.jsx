@@ -44,7 +44,7 @@ const BingewatcherMain = () => {
     <div>
       <div>
         <div className="home-table-pagination-container">
-          <button onClick={decrementPage}>Previous</button>
+          <button onClick={decrementPage}>Prev</button>
           <div>{page}</div>
           <button onClick={incrementPage}>Next</button>
         </div>

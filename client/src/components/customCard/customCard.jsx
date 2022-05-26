@@ -1,7 +1,7 @@
 import { Button, Card } from "react-bootstrap";
 import CardHeader from "react-bootstrap/esm/CardHeader";
 import Container from "react-bootstrap/Container";
-import { Store } from "../../context/store";
+// import { Store } from "../../context/store";
 import { Link } from "react-router-dom";
 
 const CustomCard = ({ cardData, onClickDetails, className }) => {
@@ -15,15 +15,14 @@ const CustomCard = ({ cardData, onClickDetails, className }) => {
               Rating average:{" "}
               {cardData?.rating?.average + "-" + cardData.status}
             </CardHeader>
+         
             <Card.Title>{cardData.name} </Card.Title>
+            <Card.Link href={cardData.officialSite}>Official site</Card.Link>
             <Card.Text>
               Language: {cardData?.language}
               <br />
               Average Runtime: {cardData.averageRuntime} min
               <br /> Premiered on {cardData.premiered}
-              <br />
-              {/* Official Site: <Link>{cardData.offcialSite}</Link> */}
-              <br />
             </Card.Text>
             {cardData.id !== "id" && (
               <Card.Text>Show id: {cardData?.id}</Card.Text>
@@ -33,7 +32,6 @@ const CustomCard = ({ cardData, onClickDetails, className }) => {
                 style={{ cursor: "pointer" }}
                 id="details-card-button"
                 onClick={() => onClickDetails(cardData.id)}
-                
               >
                 Details
               </Button>
