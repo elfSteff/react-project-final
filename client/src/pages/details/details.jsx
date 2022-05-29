@@ -58,7 +58,7 @@ const Details = (props) => {
       {filteredDetails && (
         <CustomContainer key={filteredDetails.name} cardData={filteredDetails} />
       )}
-      <Button className="move-to-watchlist-button" onClick={() => handleMoveToWatch(filteredDetails)}>
+      <Button  href="#" variant="secondary"  className="move-to-watchlist-button"  onClick={() => handleMoveToWatch(filteredDetails)}>
         Move to whatchlist
       </Button>
     </div>

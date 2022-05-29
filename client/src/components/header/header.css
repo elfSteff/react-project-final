@@ -1,7 +1,9 @@
 .custom-nav-link {
     display: block;
     padding: 0.5rem 1rem;
-    color: rgba(21, 3, 3, 0.55);
+    color: rgba(5, 4, 4, 0.55);
     text-decoration: none;
     transition: color .20s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    background-color: whitesmoke;
+
 }

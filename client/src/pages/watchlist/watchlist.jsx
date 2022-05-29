@@ -45,7 +45,8 @@ const Watchlist = () => {
                   ></div>
                 </Card.Text>
                 <div>{item?.show?.genres + " "}</div>
-                <Button
+                <Button 
+                 href="#" variant="secondary"
                   className="move-to-finished-button"
                   onClick={() => {
                     handleMoveToFinished(item);

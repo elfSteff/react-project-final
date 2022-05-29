@@ -1,37 +1,31 @@
 body {
   margin: 0rem;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-color: rgb(183, 165, 133);
+  min-width: 15vw;
+  padding: 4rem;
+  display: flexbox;
 }
 
-.custom-nav-link{
-background-color: light;
+nav {
+  height: 6vh;
+  background-color: light;
 }
 
-nav{
-  height: 9vh;
-  background-color: #212529;
-}
-
-.m-3{
+.m-3 {
   min-height: 5vh;
   background-color: rgb(183, 165, 133);
   min-width: 100vw;
   padding: 2rem;
 }
-#root{
-  min-height: 100vh;
-  background-color: rgb(183, 165, 133);
-  min-width: 15vw;
-  padding: 4rem;
-}
 
-.navbar-brand{
- 
+.navbar-brand {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
@@ -41,51 +35,57 @@ nav{
 }
 .bg-light {
   --bs-bg-opacity: 60;
-  background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;}
-
-   
-  input{
-    border-radius: 10px;
-    max-height: 2rem
-  }
-
-  button{
-    
-    color: #fff;
-    background-color: #212529;
-    border-color: #212529;
-    border-radius: 10px;
-  }
-
-  #btngenre{
-    color: #fff;
-    background-color: #212529;
-    border-color: #212529
-  }
-
-.main{
-  flex:1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.move-to-watchlist-button{
+input {
+  border-radius: 10px;
+  max-height: 2rem;
+}
+
+button {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+  border-radius: 10px;
+  
+}
+
+#btngenre {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+ 
+}
+
+.main {
+  flex: 1;
+}
+
+.move-to-watchlist-button {
   color: #fff;
   background-color: #7f8d4c;
   border-color: #212529;
   border-radius: 10px;
   opacity: calc(70%);
- 
-
+  display: block;
 }
 
-.move-to-finished-button{
+.move-to-finished-button {
   color: #fff;
   background-color: #5aaa6e;
   border-color: #212529;
   border-radius: 10px;
   opacity: calc(70%);
-
+  display: block;
 }
 
-.details-card-container{
-  
+.details-container {
+  display: block;
+}
+
+.card-image-top {
+  display: flex;
+  height: 60vh;
+  width: 85vw;
 }

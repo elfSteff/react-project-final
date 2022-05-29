@@ -67,23 +67,21 @@ const Shows = () => {
         className="m-3"
       >
         <input type="text" onChange={handleQueryOnChange} />
-        <button onClick={handleSearch}>Search</button>
+        <button  href="#" variant="secondary" onClick={handleSearch}>Search</button>
       </div>
       <div className="sm">
         {genres.map((g) => (
-          <Button
+          <Button  href="#" variant="secondary"
             id="btngenre"
-            variant="light"
-            className="me-2"
+            
             onClick={() => filterByGenre(g)}
           >
             {g}
           </Button>
         ))}
-        <Button
+        <Button  href="#" variant="secondary"
           id="btngenre"
-          variant="light"
-          className="me-2"
+       
           onClick={clearGenreFilter}
         >
           Clear Filter
@@ -114,6 +112,7 @@ const Shows = () => {
                   <div>{item.show.genres + ' '}</div>
                   <Button 
                 className="move-to-watchlist-button" 
+                href="#" variant="secondary"
                     onClick={() => handleMoveToWatch(item)}
                   >
                     Move to whatchlist

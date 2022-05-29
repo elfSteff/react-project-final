@@ -28,7 +28,7 @@ const CustomCard = ({ cardData, onClickDetails, className }) => {
               <Card.Text>Show id: {cardData?.id}</Card.Text>
             )}
             <Container id="button-container-cards">
-              <Button
+              <Button  href="#" variant="secondary"
                 style={{ cursor: "pointer" }}
                 id="details-card-button"
                 onClick={() => onClickDetails(cardData.id)}

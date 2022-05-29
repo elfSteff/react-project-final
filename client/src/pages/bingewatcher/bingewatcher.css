@@ -11,23 +11,17 @@
 
 #details-card-button {
   color: #fff;
-  background-color: #212529;
+  background-color: #596169;
   border-color: #212529;
   border-radius: 10px;
   opacity: calc(80%);
+  display: block;
+  
 }
 
 #cardShow {
   background-color: rgb(245, 241, 206);
   opacity: calc(80%);
-}
-
-#button-container-cards {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  margin: 1rem;
-  gap: 3rem;
 }
 
 .home-table-pagination-container {
