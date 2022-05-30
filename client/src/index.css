@@ -81,7 +81,9 @@ button {
 }
 
 .details-container {
-  display: block;
+  display: flex;
+  content: inherit;
+  position:inherit;
 }
 
 .card-image-top {
