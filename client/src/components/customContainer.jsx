@@ -1,8 +1,21 @@
+import React, { useContext } from "react";
+import { Store } from "../context/store";
 import { Card } from "react-bootstrap";
-import CardHeader from "react-bootstrap/esm/CardHeader";
-import Container from "react-bootstrap/Container";
 
-const CustomContainer = ({ cardData, className }) => {
+import Container from "react-bootstrap/Container";
+import {Button} from "react-bootstrap";
+
+const CustomContainer = ({ cardData, className}) => {
+  const store = useContext(Store);
+  
+  const handleMoveToWatch = (cardDataToMove) => {
+    const temp = store.globalState.watched
+     temp.push(cardDataToMove);
+     store.dispatch({
+       type: "SET_WATCHED",
+       payload: temp
+     })
+  };
   return (
     <div className={`details-container ${className}`}>
       <Container fluid className="details-container">
@@ -18,9 +31,10 @@ const CustomContainer = ({ cardData, className }) => {
         >
           <Card.Img variant="top" src={cardData?.image?.medium} />
           <Card.Body>
+            
             <Card.Title className="card-title">{cardData.name} </Card.Title>
             <Card.Link href={cardData.officialSite} >Official site</Card.Link>
-            <CardHeader>
+            <Card.Text>
               Genres: {cardData.genres}
               <br />
               Rating average: {cardData?.rating?.average}
@@ -31,15 +45,17 @@ const CustomContainer = ({ cardData, className }) => {
               <br />
               Average Runtime: {cardData?.averageRuntime} min
               <br /> Premiered on {cardData?.premiered}
-            </CardHeader>
+            </Card.Text>
             <br />
             <Card.Text>
-             <h5> Details:</h5>
+             <> Details:</>
                             <span dangerouslySetInnerHTML={{ __html: cardData.summary }} />
             </Card.Text>
             {cardData.id !== "id" && (
               <Card.Text>Show id: {cardData?.id}</Card.Text>
             )}
+            <Button  href="#" variant="secondary"  className="move-to-watchlist-button" 
+            onClick={()=> handleMoveToWatch(cardData)}>Move to watchlist </Button>
           </Card.Body>
         </Card>
       </Container>

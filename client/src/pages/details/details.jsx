@@ -54,13 +54,13 @@ const Details = (props) => {
 
   
   return (
-    <div>
-      {filteredDetails && (
-        <CustomContainer key={filteredDetails.name} cardData={filteredDetails} />
+   <div>
+      {filteredDetails && ( 
+        <div>
+        <CustomContainer key={filteredDetails.name} cardData={filteredDetails} /> 
+        </div>
       )}
-      <Button  href="#" variant="secondary"  className="move-to-watchlist-button"  onClick={() => handleMoveToWatch(filteredDetails)}>
-        Move to whatchlist
-      </Button>
+      
     </div>
   );
 };

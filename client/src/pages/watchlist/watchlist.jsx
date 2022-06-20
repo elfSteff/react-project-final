@@ -1,13 +1,14 @@
-import { useContext, useState } from "react";
+import React from "react";
+import { useContext } from "react";
 import { Card, Button } from "react-bootstrap";
 import { Store } from "../../context/store";
 
 const Watchlist = () => {
   const store = useContext(Store);
 
-  const handleRemoveFromWatchlist = (itemToMove) => {
+  const handleRemoveFromWatchlist = (cardDataToMove) => {
     const tempList = store.globalState.watched.filter(
-      (item) => item?.show?.id !== itemToMove?.show?.id
+      (cardData) => cardData?.id !== cardDataToMove?.id
     );
     store.dispatch({
       type: "SET_WATCHED",
@@ -15,41 +16,41 @@ const Watchlist = () => {
     });
   };
 
-  const handleMoveToFinished = (itemToMove) => {
+  const handleMoveToFinished = (cardDataToMove) => {
     const temp = store.globalState.finished;
-    temp.push(itemToMove);
+    temp.push(cardDataToMove);
     store.dispatch({
       type: "SET_FINISHED",
       payload: temp,
     });
-    handleRemoveFromWatchlist(itemToMove);
+    handleRemoveFromWatchlist(cardDataToMove);
   };
 
   return (
     <div className="home-cards-container">
       <Store.Consumer>
         {(store) =>
-          store.globalState.watched.map((item, index, filteredDetails) => (
+          store.globalState.watched.map((cardData, index) => (
             <Card key={index} style={{ width: "22rem", marginBottom: "1rem" }}>
-              <Card.Img variant="top" src={item?.show?.image?.medium}/>
+              <Card.Img variant="top" src={cardData?.image?.medium}/>
              
               <Card.Body>
                 <Card.Title>
                   <div
-                    dangerouslySetInnerHTML={{ __html: item?.show?.name }}
+                    dangerouslySetInnerHTML={{ __html: cardData?.name }}
                   ></div>
                 </Card.Title>
                 <Card.Text>
                   <div
-                    dangerouslySetInnerHTML={{ __html: item?.show?.summary }}
+                    dangerouslySetInnerHTML={{ __html: cardData?.summary }}
                   ></div>
                 </Card.Text>
-                <div>{item?.show?.genres + " "}</div>
+                <div>{cardData?.genres + " "}</div>
                 <Button 
                  href="#" variant="secondary"
                   className="move-to-finished-button"
                   onClick={() => {
-                    handleMoveToFinished(item);
+                    handleMoveToFinished(cardData);
                   }}
                 >
                   Move to Finished

@@ -9,17 +9,17 @@ const FinishedList = () => {
     <div className="home-cards-container">
       <Store.Consumer>
         {(store) =>
-          store.globalState.finished.map((item, index) => (
+          store.globalState.finished.map((cardData, index) => (
             <Card key={index} style={{ width: "22rem", marginBottom: "1rem" }}>
-              <Card.Img variant="top" src={item?.show?.image?.medium} />
+              <Card.Img variant="top" src={cardData?.image?.medium} />
               <Card.Body>
                 <Card.Title>
-                  <div dangerouslySetInnerHTML={{ __html: item?.show?.name }}></div>
+                  <div dangerouslySetInnerHTML={{ __html: cardData?.name }}></div>
                 </Card.Title>
                 <Card.Text>
-                  <div dangerouslySetInnerHTML={{ __html: item?.show?.summary }}></div>
+                  <div dangerouslySetInnerHTML={{ __html: cardData?.summary }}></div>
                 </Card.Text>
-                <div>{item?.show?.genres}</div>
+                <div>{cardData?.genres}</div>
          
               </Card.Body>
             </Card>
