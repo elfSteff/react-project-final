@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import { Store } from "../../context/store";
 import { useParams } from "react-router-dom";
-import { Button } from "react-bootstrap";
+
 import CustomContainer from "../../components/customContainer";
 
 const Details = (props) => {

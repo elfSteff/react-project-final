@@ -48,13 +48,21 @@ const Watchlist = () => {
                 <div>{cardData?.genres + " "}</div>
                 <Button 
                  href="#" variant="secondary"
-                  className="move-to-finished-button"
+                  className="move-to-button"
                   onClick={() => {
                     handleMoveToFinished(cardData);
                   }}
                 >
                   Move to Finished
                 </Button>
+                <Button  href="#" variant="secondary"
+                  className="move-to-button"
+                  onClick={() => {
+                    handleRemoveFromWatchlist(cardData);
+                  }}
+                  >
+                    Remove from Watchlist
+                  </Button>
               </Card.Body>
             </Card>
           ))

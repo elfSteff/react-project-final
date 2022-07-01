@@ -19,19 +19,3 @@ export { searchShows };
 
 
 
-const stable = axios.create({
-  baseURL: "https://api.tvmaze.com",
-  headers: { Accept: "application/json" },
-});
-
-const showsHome = async (querySearch) => {
-  try {
-    const home = await stable.get(`/search/shows?q=${querySearch}`);
-    return home;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export { showsHome };
-

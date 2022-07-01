@@ -71,7 +71,8 @@ button {
   display: block;
 }
 
-.move-to-finished-button {
+.move-to-button {
+  
   color: #fff;
   background-color: #5aaa6e;
   border-color: #212529;
